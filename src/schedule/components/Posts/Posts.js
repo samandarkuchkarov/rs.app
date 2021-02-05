@@ -17,7 +17,7 @@ const Posts = () => {
 	},[dispatch])
 
   const posts = useSelector((state)=>state.posts)
-  console.log()
+  console.log(posts)
   
  
 
@@ -62,18 +62,16 @@ function submit(){
   posts[0].teacher = teacher;
   dispatch(updatedPost(posts[0]._id,posts[0]))
 } 
-console.log(posts) 
+
 if(posts.length !== 0){
-  console.log(posts[0].teacher.length)
   if(posts[0].teacher.length === size){
     let info = [...posts]
-    console.log(info.date)
     for(let i = 0;i<size;i++){
       items[i] = [info[0].date[i],info[0].time[i],info[0].place[i],info[0].topic[i],info[0].teacher[i]]
     }
     
   }
-  console.log(items)
+
   items = items.map(item=>{
     return(
     <tr key={unique++} >
@@ -86,7 +84,7 @@ if(posts.length !== 0){
   })
 }
 
-console.log(items)
+
 const [ButtonText,setButtonText] = useState('Edit');
 
  function change(){

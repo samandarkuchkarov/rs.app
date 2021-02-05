@@ -27,7 +27,7 @@ export const LoginPage = (rerepeat) => {
                 rerepeat.reapeat('reapet')
                 
             }else{
-                alert('Wrong email or password')
+              console.log(users.email === form.email)
             }
         })
     }

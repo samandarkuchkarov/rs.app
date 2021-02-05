@@ -11,12 +11,12 @@ const StudentSchedule=()=>{
 	},[dispatch])
 
   const posts = useSelector((state)=>state.posts)
-
+    console.log(posts)
 
     let unique = 574845;
    
     let table = []
-    if(posts[0].teacher.length=== 0){
+    if(posts.length=== 0){
         for(let i=0;i<size;i++){
             table.push(
            <tr key={unique++} >
