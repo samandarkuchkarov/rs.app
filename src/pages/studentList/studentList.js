@@ -1,18 +1,23 @@
 import {useSelector} from 'react-redux'
 import './studentList.css'
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { useDispatch} from 'react-redux'
-import {updatedPost} from './../../actions/posts'
+import {updatedPost,getPosts} from './../../actions/posts'
 
 export const StudentList=  () =>{
-
-    const Data = useSelector((state)=>state.posts)
     const dispatch = useDispatch()
+	useEffect(()=>{
+		dispatch(getPosts())
+	},[dispatch])
+    const Data = useSelector((state)=>state.posts)
+   
     let students = Data.filter((student)=>{
-        return (student.mentor===false)&&(student.mentorName==='')
+        console.log(Data)
+        return ((student.mentor===false)&&(student.mentorName==='Empty'||student.mentorName===''))
     })
+    
     const [form, setForm] = useState()
 
     const changeHandler=(event)=>{

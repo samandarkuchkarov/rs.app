@@ -20,6 +20,7 @@ import {TaskCreator} from './pages/taskCreator/task'
 import {Submitask} from './pages/submit/submit'
 import {CheckList} from './pages/checklist/checklist'
 import {Score} from './pages/score/score'
+import {Edit} from './pages/edit/edit'
 const store = createStore(reducers,compose(applyMiddleware(thunk)))
 export const useRoutes = (isAuthenticated, isMentor,rerepeat) => {
     if(isAuthenticated) {
@@ -43,8 +44,8 @@ export const useRoutes = (isAuthenticated, isMentor,rerepeat) => {
                     <StudentTable/>
                     </Provider>
                     </Route>
-                    <Route path="/dashboard" exact>
-                        <DashboardPage />
+                    <Route path="/edit" exact>
+                        <Edit />
                     </Route>
                     <Redirect to="/main" />
                     
@@ -77,9 +78,9 @@ export const useRoutes = (isAuthenticated, isMentor,rerepeat) => {
                     <Table/>
                     </Provider>
                     </Route>
-                <Route path="/dashboardMentors" exact>
-                    <DashboardPage />
-                </Route>
+                    <Route path="/edit" exact>
+                        <Edit />
+                    </Route>
                 <Redirect to="/mentor" />
             </Switch>
         )

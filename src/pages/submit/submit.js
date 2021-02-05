@@ -24,7 +24,6 @@ export const Submitask = ()=>{
     const posts = useSelector((state)=>state.posts)
     const submit = ()=>{
         posts.forEach((user)=>{
-            console.log(user.email,localStorage.getItem('email'))
             if(user.email===localStorage.getItem('email')){
               
                 user.tasks.forEach((item,i)=>{

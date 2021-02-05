@@ -34,7 +34,6 @@ const Posts = () => {
        <td className='rrow5' key={unique++} suppressContentEditableWarning={true} contentEditable={editable}></td>
      </tr>)}}
   table(size)
-  let info = []
   
 function submit(){
   let date =[];

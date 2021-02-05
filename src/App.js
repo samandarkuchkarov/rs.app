@@ -26,8 +26,7 @@ function App() {
   const [forlogin,setforlogin] = useState('norepeat')
   const routes = useRoutes(condition1, condition2,setforlogin)
   let nav;
-  console.log(localStorage.getItem('email')== null)
-  if(localStorage.getItem('email')== null){
+  if(localStorage.getItem('email')=== null){
 
     nav =<NavbarNoAuth reapeat={rerepeat} /> 
   }else{
