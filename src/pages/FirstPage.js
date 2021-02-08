@@ -7,7 +7,7 @@ export const FirstPage = () => {
     
     return (
         <div className="firstPage">
-            <h1>RS app clone</h1>
+            <h1></h1>
         </div>
     )
 }

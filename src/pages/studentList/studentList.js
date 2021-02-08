@@ -25,14 +25,18 @@ export const StudentList=  () =>{
         setForm({ ...form, text: event.target.value })
     }
     const submit = ()=>{
+        let counter = 0
         students.forEach((item)=>{
             
             if(item.username===form.text){
                 let data = item
                 data.mentorName = localStorage.getItem('email')
-                
                 dispatch(updatedPost(item._id,data))
             }else{
+                if(counter!==0){
+                    return
+                }
+                counter++
                 alert('There is not this kind of student')
             }
         })
@@ -40,6 +44,7 @@ export const StudentList=  () =>{
     return(
 
         <> 
+        
         <div className='SL-input-container'>
         <form  noValidate autoComplete="off" onChange={ changeHandler }>
             <TextField className='input'  label='Write username of student who you want to teach'></TextField>
@@ -47,7 +52,6 @@ export const StudentList=  () =>{
         <Button variant="contained" onClick={submit} color="primary">Submit</Button>
         </div>
         
-       
         <table>
             <tbody>
             <tr className = 'SL-container'>

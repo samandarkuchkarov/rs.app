@@ -28,6 +28,10 @@ export const TaskCreator =()=>{
                })
         }        
     }
+    let length =1;
+    if(posts.length!==0){
+        length = posts[0].tasks.length
+    }
     const delate = () => {
         if(posts[0].tasks.length===0){
             return
@@ -39,16 +43,18 @@ export const TaskCreator =()=>{
     }   
         let number =1
       const listCreate =()=>{
-        return posts[0].tasks.map((task)=>{
-            return (
-                <div className='TC-container-item'> {number++}: {task[0]} ({task[1]} score) </div>
-            )
-        })
+          if(posts.length!==0){
+            return posts[0].tasks.map((task)=>{
+                return (
+                    <div className='TC-container-item'> {number++}: {task[0]} ({task[1]} score) </div>
+                )
+            })
+          }
       }
 
     return(
         <div>
-            <div className='TC-header'>There is only {posts[0].tasks.length} tasks for students</div>
+            <div className='TC-header'>There is only {length} tasks for students</div>
             <div className='TC-list'>
             <div className='TC-container-item'>Tasks list</div>
                 {listCreate()}

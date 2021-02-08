@@ -50,15 +50,15 @@ export const Submitask = ()=>{
                 return item[2]!==undefined
             })
         }})
-        let z =[]
+        let menuItemas =[]
         if(posts.length!==0){
-           z = posts[0].tasks.map((item)=>{
+            menuItemas = posts[0].tasks.map((item)=>{
                 return (
                     <MenuItem key = {unuqiue++}value={item[0]}>{item[0]}</MenuItem> 
                 )})
         
         }
-let number = 1
+    let number = 1
     return(
         <>
         <div className='submited-tasks'>
@@ -78,7 +78,7 @@ let number = 1
           value={label}
           onChange={handleChange}
         >
-       {z}
+       {menuItemas}
         </Select>
       </FormControl>
        <form  noValidate autoComplete="off" onChange={ changeHandler }>
