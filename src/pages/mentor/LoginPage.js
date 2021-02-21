@@ -47,7 +47,7 @@ export const LoginPageMentors = (rerepeat) => {
                                 <div className="input-field">
                                 <i className="material-icons prefix">lock_open</i>
                                     <input id="password" type="password" name="password" onChange={ changeHandler } />
-                                    <label htmlFor="password">Password</label>
+                                    <label htmlFor="password">Password (admin123)</label>
                                 </div>
                             </div>
                         </div>

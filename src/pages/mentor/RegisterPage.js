@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import { useDispatch} from 'react-redux'
 import {createPost} from '../../actions/posts'
 import {useSelector} from 'react-redux'
+import {useHistory} from 'react-router-dom'
 
 export const RegisterPageMentors = (rerepeat) => {
-  
+    const history = useHistory()
     const dispatch = useDispatch()
     const posts = useSelector((state)=>state.posts)
     const [form2, setForm2] = useState({
@@ -43,20 +44,13 @@ export const RegisterPageMentors = (rerepeat) => {
             form2.tasks=posts[0].tasks
         }else{
             form2.tasks = []
-            posts.forEach(element => {
-                if(element.email === form2.email || element.username === form2.username){
-                    alert('this username or email is busy')
-                    busyName = true
-                    return
-                    
-                }
-            });
         }
         if(busyName===false){
             dispatch(createPost(form2))
             localStorage.setItem("email", form2.email);
             localStorage.setItem("mentor", 'true');
-            rerepeat.reapeat('reapet')
+            history.push('/loginMentors')
+           
         }
       
         
