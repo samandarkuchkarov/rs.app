@@ -36,7 +36,7 @@ export const LoginPage = (rerepeat) => {
         <div>
             <div className="row">
                 <div className="col s6 offset-s3">
-                    <h1>RS APP CLONE</h1>
+                    <h1>EduCenter</h1>
                     <div className="card blue-grey darken-1">
                         <div className="card-content white-text">
                             <span className="card-title">Login for students</span>
