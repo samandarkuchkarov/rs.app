@@ -13,9 +13,15 @@ export const MainMentor = () => {
 	const posts = useSelector((state)=>state.posts)
 	const storage = localStorage.getItem('email')
 	let email = ''
+	let english = ''
+	let location = ''
+	let telegram = ''
 	posts.forEach(element => {
 		if(storage === element.email){
 			email = element.email
+			english = element.english
+			location = element.location
+			telegram = element.telegram
 		}
 	});
     return (
@@ -56,8 +62,40 @@ export const MainMentor = () => {
 					Edit profile
 				</NavLink></div>
 			</div>
+			<div className="mentor">
+              
+				<div className="mentorHeader">Your mentor</div>
+				<div className="montorContent">
+					<div>
+						<div className="mentorName">Mentor Name</div>
+						<div className="mentorLink">
+							<a href="/#"><img alt='img' src="https://raw.githubusercontent.com/xiiforlearning/rs-app-clone/treger78/assets/MainPage/gh-profile-img.png?token=AQ32MFDHUYYGDEW6ETS6VOLAB7C7M"/></a>
+							<a href="/#">{}</a>
+							<a href="https://github.com/rolling-scopes-school"><span className="mentorGhLink">
+							</span></a>
+							</div>
+					</div>
+					<div className="mentorItem">
+						<div className="mentorTitle">Email: </div>
+						<div>{email}</div>
+					</div>
+					<div className="mentorItem">
+						<div className="mentorTitle">Estimated English level</div>
+						<div>{english}</div>						
+					</div>
+					<div className="mentorItem">
+						<div className="mentorTitle">Telegram: </div>
+						<div>{telegram}</div>						
+					</div>
+					<div className="mentorItem">
+						<div className="mentorTitle">Loaction: </div>
+						<div>{location}</div>						
+					</div>
+				</div>
+			</div>
 			
 		</div>
+		
 	</main>   
     )
 }
