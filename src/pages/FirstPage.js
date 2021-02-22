@@ -18,19 +18,22 @@ export const FirstPage = () => {
               
             </div>
         </div>
-        <div className="secondPage">
-            <div className="secondPage-text">
-                <h2>Comfortable and quick</h2>
-                <p>We have two kind of users. They are mentors and students. Mentor can modify schedule, create task or delate task , check job of student and  put mark for this job.
-                    Mentor can also organize video confirence and modify own data like username , location and other informations,</p>
-                <p>Student can show own results in mainpage and score table ,show schedule of course and submit exact homework</p>
-            </div>
-            <div className="secondPage-img"></div>
-        </div>
-        <div>
-            <div>Technical Features</div>
-            <div>For building EduCenter platform we used React.js, Node.js, MangoDb, Express.js, Redux and other benifical tools. For deploying our website we used Heroku and Netlify </div>
-        </div>
+        { /*
+              <div className="secondPage">
+              <div className="secondPage-text">
+                  <h2>Comfortable and quick</h2>
+                  <p>We have two kind of users. They are mentors and students. Mentor can modify schedule, create task or delate task , check job of student and  put mark for this job.
+                      Mentor can also organize video confirence and modify own data like username , location and other informations,</p>
+                  <p>Student can show own results in mainpage and score table ,show schedule of course and submit exact homework</p>
+              </div>
+              <div className="secondPage-img"></div>
+          </div>
+          <div>
+              <div>Technical Features</div>
+              <div>For building EduCenter platform we used React.js, Node.js, MangoDb, Express.js, Redux and other benifical tools. For deploying our website we used Heroku and Netlify </div>
+          </div>*/
+        }
+  
         </>
     )
 }
