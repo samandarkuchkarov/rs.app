@@ -24,6 +24,8 @@
 
 .firstPage {
     height: 500px;
+    background-color: rgb(255, 255, 255);
+    color: black;
 }
 
 .container1-article {
@@ -41,4 +43,114 @@
     padding: 30px;
     height: 300px;
     background-size: cover;
+}
+
+.secondPage-title {
+    text-align: right;
+    margin-right: 5rem;
+    text-decoration: underline;
+    font-size: 32px;
+    margin-bottom: 3rem;
+}
+
+.secondPage {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    padding: 0rem 2rem 2rem;
+    background-color: rgb(22, 24, 31)
+}
+
+.secondPage-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 15rem 1rem;
+    
+}
+
+.secondPage-container-item1 {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background-color: rgb(97, 190, 178);
+    top: 0;
+    right: 40%;
+    z-index: 0;
+}
+.secondPage-container-item2 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 35%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    top: 7%;
+    left: 18%;
+    z-index: 2;
+    color: black;
+}
+.secondPage-container-item2 p{
+    line-height: 1.6;
+    margin: 0 auto;
+    font-size: 1rem;
+    padding: 1rem;
+}
+.secondPage-container-item3 {
+    position: absolute;
+    width: 35%;
+    height: 55%;
+    z-index: 1;
+    bottom: 7%;
+    right: 30%;
+    background-size: cover;
+}
+
+.logo {
+    margin: 1rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100px;
+}
+
+.featuresPage {
+    text-align: center;
+}
+
+.featuresPage-container {
+    margin-bottom: 1rem;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.logos2 {
+    width: 33%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.logo-react {
+    width: 125px;
+}
+.logo-node {
+    width: 163px;
+}
+.logo-express {
+    background-color: #fff;
+    width: 163px;
+}
+.logo-mongo {
+    height: 57px;
+    width: 163px;
+}
+.logo-heroku {
+    height: 50px;
+    width: 163px;
+}
+.logo-netlify {
+    width: 163px;
 }

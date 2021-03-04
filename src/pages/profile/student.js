@@ -1,7 +1,7 @@
 import {Grid} from '@material-ui/core'
 import Paper from '@material-ui/core/Paper';
 import './student.css'
-import {useSelector} from 'react-redux'
+import {useDispatch,useSelector} from 'react-redux'
 
 export const Profile = () => {
     const posts = useSelector((state)=>state.posts)

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import {useDispatch,useSelector} from 'react-redux'
 import {getPosts} from '../../actions/posts'
 export const LoginPageMentors = (rerepeat) => {
@@ -47,7 +47,7 @@ export const LoginPageMentors = (rerepeat) => {
                                 <div className="input-field">
                                 <i className="material-icons prefix">lock_open</i>
                                     <input id="password" type="password" name="password" onChange={ changeHandler } />
-                                    <label htmlFor="password">Password (admin123)</label>
+                                    <label htmlFor="password">Password</label>
                                 </div>
                             </div>
                         </div>

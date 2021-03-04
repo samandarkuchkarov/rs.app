@@ -16,7 +16,7 @@ function App() {
     condition1 = false;
   }else{
     condition1 = true;
-    if(localStorage.getItem('mentor') === 'false'){
+    if(localStorage.getItem('mentor') == 'false'){
       condition2 =false
     }else{
       condition2 = true

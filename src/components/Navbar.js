@@ -30,7 +30,7 @@ export const Navbar = ({setforlogin}) => {
     return (
         <nav> 
             
-            <div className="nav-wrapper blue-grey darken-1">
+            <div className="nav-wrapper blue-grey darken-4">
                     <NavLink to="/" className="brand-logo">Home</NavLink>
                     <ul className="right">
                          <li onClick={()=>{ setStatus1('none'); setStatus2('flex'); }} className = {status1}><div className='pointer' >My Profile<i className="material-icons right">arrow_drop_down</i></div></li>
